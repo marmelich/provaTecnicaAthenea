@@ -1,0 +1,110 @@
+
+/* MARK: BUTTON */
+#button-new-patient{
+  background-color: #375171;
+  margin-top: 2%;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  padding: 15px;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.275);
+}
+
+#button-new-patient:hover{
+  cursor: pointer;
+  background-color: #375171d4;
+  border-color: none;
+}
+
+
+/* MARK: TABLE */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.275);
+}
+
+th{
+  background-color:  #375171;
+  color: white;
+  font-size: large;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  border: none !important
+}
+
+th input {
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:hover{
+  cursor: pointer;
+  background-color: #3751717c;
+}
+
+thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+
+/* MARK: PAGINATION */
+#patients-pagination{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  padding:10px;
+}
+
+#patients-pagination span {
+  font-family: arial, sans-serif;
+  padding: 10px ;
+}
+
+#patients-pagination button {
+  background-color: #375171;
+  color: white;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.275);
+}
+
+#patients-pagination button:hover{
+  cursor: pointer;
+  background-color: #375171d4;
+  border-color: none;
+}

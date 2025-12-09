@@ -1,0 +1,43 @@
+<button id="button-new-patient" (click)="newPatient()">Afegir pacient</button>
+
+@if (patientsResults$ | async; as resultObject) {
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Cognoms</th>
+        <th>Data de naixement</th>
+        <th>DNI</th>
+        <th>Població</th>
+        <th>CIP</th>
+      </tr>
+    </thead>
+    <tr>
+      <th><input [(ngModel)]="filters.nom" placeholder="Buscar nom"></th>
+      <th><input [(ngModel)]="filters.cognoms" placeholder="Buscar cognoms"></th>
+      <th><input [(ngModel)]="filters.dataNaixement" type="date"></th>
+      <th><input [(ngModel)]="filters.dni" placeholder="Buscar DNI"></th>
+      <th><input [(ngModel)]="filters.poblacio" placeholder="Buscar població"></th>
+      <th><input [(ngModel)]="filters.cip" placeholder="Buscar CIP"></th>
+    </tr>
+    
+    <tbody>
+      @for (patient of paginationGetPagedPatients(resultObject); track patient.id) {
+        <tr (click)="onRowClicked(patient)">
+          <td>{{patient.nom}}</td>
+          <td>{{patient.cognoms}}</td>
+          <td>{{patient.dataNaixement}}</td>
+          <td>{{patient.dni}}</td>
+          <td>{{patient.poblacio}}</td>
+          <td>{{patient.cip}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <div id="patients-pagination">
+    <button (click)="paginationPreviousPage()" [disabled]="paginationCurrentPage === 1">Anterior</button>
+    <span>Pàgina {{ paginationCurrentPage }} de {{ paginationTotalPages }}</span>
+    <button (click)="paginationNextPage()" [disabled]="paginationCurrentPage === paginationTotalPages">Següent</button>
+  </div>
+}

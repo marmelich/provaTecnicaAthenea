@@ -1,0 +1,59 @@
+<div id="patient-detail-container">
+
+    <div id="patient-detail-buttons">
+        <button (click)="goHome()"><b>←</b> Tornar</button>
+        <button (click)="toggleEdit()" >{{ isEditing ? "Desar" : "Editar" }}</button>
+    </div>
+
+    <div id="patient-detail-box">
+        @if (!isEditing) {
+            @if (patient$ | async; as patient) {
+                <div id="patient-detail-data">
+                <p><b>Nom:</b> {{ patient.nom }}</p>
+                <p><b>Cognoms:</b> {{ patient.cognoms }}</p>
+                <p><b>DNI:</b> {{ patient.dni }}</p>
+                <p><b>Data de naixement:</b> {{ patient.dataNaixement }}</p>
+                <p><b>Població:</b> {{ patient.poblacio }}</p>
+                <p><b>CIP:</b> {{ patient.cip }}</p>
+                </div>
+            }
+        }
+
+        @if (isEditing) {
+            <div id="patient-detail-form-container">
+
+                <div>
+                <label>Nom:</label>
+                <input [(ngModel)]="editablePatient.nom" maxlength="100">
+                </div>
+
+                <div>
+                <label>Cognoms:</label>
+                <input [(ngModel)]="editablePatient.cognoms" maxlength="100">
+                </div>
+
+                <div>
+                <label>DNI:</label>
+                <input [(ngModel)]="editablePatient.dni" maxlength="9">
+                </div>
+
+                <div>
+                <label>Data de naixement:</label>
+                <input [(ngModel)]="editablePatient.dataNaixement" type="date">
+                </div>
+
+                <div>
+                <label>Població:</label>
+                <input [(ngModel)]="editablePatient.poblacio"maxlength="100" >
+                </div>
+
+                <div>
+                <label>CIP:</label>
+                <input [(ngModel)]="editablePatient.cip" maxlength="14">
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

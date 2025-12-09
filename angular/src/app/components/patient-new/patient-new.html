@@ -1,0 +1,41 @@
+<div id="patient-new-container">
+
+    <div id="patient-new-buttons">
+        <button (click)="goHome()"><b>←</b> Tornar</button>
+        <button (click)="createPatient()">Desar</button>
+    </div>
+
+    <div id="new-patient-box">
+        <div id="patient-new-form-container">
+            <div>
+            <label>Nom:</label>
+            <input [(ngModel)]="newPatient.nom" maxlength="100">
+            </div>
+
+            <div>
+            <label>Cognoms:</label>
+            <input [(ngModel)]="newPatient.cognoms" maxlength="100">
+            </div>
+
+            <div>
+            <label>DNI:</label>
+            <input [(ngModel)]="newPatient.dni" maxlength="9">
+            </div>
+
+            <div>
+            <label>Data de naixement:</label>
+            <input [(ngModel)]="newPatient.dataNaixement" type="date">
+            </div>
+
+            <div>
+            <label>Població:</label>
+            <input [(ngModel)]="newPatient.poblacio" maxlength="100">
+            </div>
+
+            <div>
+            <label>CIP:</label>
+            <input [(ngModel)]="newPatient.cip" maxlength="14">
+            </div>
+        </div>
+            
+    </div>

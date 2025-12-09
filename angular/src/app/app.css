@@ -1,0 +1,16 @@
+header{
+    background-color: #375171;
+    padding: 30px;
+    margin: 0;
+    font-family: arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    text-shadow: 1px 1px 2px rgb(192, 191, 191);
+}
+
+
+main{
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+}

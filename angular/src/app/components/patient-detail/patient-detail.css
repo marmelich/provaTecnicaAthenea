@@ -1,0 +1,86 @@
+#patient-detail-container {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+
+/* MARK: BUTTONS */
+#patient-detail-buttons{
+    margin-top: 2%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+#patient-detail-buttons button{
+    background-color: #375171;
+    margin: 2px;
+    margin-top: 2%;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.275);
+}
+
+#patient-detail-buttons button b{
+    font-size: medium;
+}
+
+#patient-detail-buttons button:hover{
+    cursor: pointer;
+    background-color: #375171d4;
+    border-color: none;
+}
+
+
+/* MARK: BOX */
+#patient-detail-box{
+    display: block;
+    background-color: rgb(203, 207, 203);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.275);
+    height: 25%;
+
+}
+
+/* MARK DATA */
+#patient-detail-data{
+    display: block;
+    padding: 10px;
+    padding-left: 20px;
+    font-family: arial, sans-serif;
+
+}
+
+
+/* MARK: FORM */
+#patient-detail-form-container {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    padding: 10px;
+    padding-left: 10px;
+    font-family: arial, sans-serif;
+    border-radius: 10px;
+}
+
+#patient-detail-form-container div{
+    padding: 10px;
+}
+
+#patient-detail-form-container div label{
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+#patient-detail-form-container div input {
+    border: none;
+    border-radius: 5px;
+    font-size: medium ;
+    width: min-content;
+}
