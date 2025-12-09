@@ -13,12 +13,42 @@
       </tr>
     </thead>
     <tr>
-      <th><input [(ngModel)]="filters.nom" placeholder="Buscar nom"></th>
-      <th><input [(ngModel)]="filters.cognoms" placeholder="Buscar cognoms"></th>
-      <th><input [(ngModel)]="filters.dataNaixement" type="date"></th>
-      <th><input [(ngModel)]="filters.dni" placeholder="Buscar DNI"></th>
-      <th><input [(ngModel)]="filters.poblacio" placeholder="Buscar població"></th>
-      <th><input [(ngModel)]="filters.cip" placeholder="Buscar CIP"></th>
+      <th>
+        <div class="filter-input-container"> 
+          <input [(ngModel)]="filters.nom" placeholder="Buscar nom">
+          <button class="button-cancel-filter" *ngIf="filters.nom" (click)="filters.nom = ''">X</button>
+        </div>
+      </th>
+      <th>
+        <div class="filter-input-container">
+          <input [(ngModel)]="filters.cognoms" placeholder="Buscar cognoms">
+          <button class="button-cancel-filter" *ngIf="filters.cognoms" (click)="filters.cognoms = ''">X</button>
+        </div>
+      </th>
+      <th>
+        <div class="filter-input-container">
+          <input [(ngModel)]="filters.dataNaixement" type="date">
+          <button class="button-cancel-filter" *ngIf="filters.dataNaixement" (click)="filters.dataNaixement = ''">X</button>
+        </div>
+      </th>
+      <th>
+        <div class="filter-input-container">
+          <input [(ngModel)]="filters.dni" placeholder="Buscar DNI">
+          <button class="button-cancel-filter" *ngIf="filters.dni" (click)="filters.dni = ''">X</button>
+        </div>
+      </th>
+      <th>
+        <div class="filter-input-container">
+          <input [(ngModel)]="filters.poblacio" placeholder="Buscar població">
+          <button class="button-cancel-filter" *ngIf="filters.poblacio" (click)="filters.poblacio = ''">X</button>
+        </div>
+      </th>
+      <th>
+        <div class="filter-input-container">
+          <input [(ngModel)]="filters.cip" placeholder="Buscar CIP">
+          <button class="button-cancel-filter" *ngIf="filters.cip" (click)="filters.cip = ''">X</button>
+        </div>
+      </th>
     </tr>
     
     <tbody>

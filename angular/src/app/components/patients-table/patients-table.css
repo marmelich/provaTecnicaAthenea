@@ -43,10 +43,28 @@ td, th {
   border: none !important
 }
 
+/* FILTER */
+.filter-input-container{
+  position: relative;
+  width: 100%;
+}
+
 th input {
+  width: 90%;
   border-radius: 10px;
   padding: 5px;
   border: none;
+  left: 30px;
+}
+
+.button-cancel-filter{
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 tr:nth-child(even) {
