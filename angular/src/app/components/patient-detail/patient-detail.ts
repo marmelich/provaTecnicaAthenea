@@ -19,6 +19,7 @@ export class PatientDetail {
   
   public patient$!: Observable<Patient> //pacient lectura
   public editablePatient!: Patient; //pacient editar
+  public editablePatientOriginal!: Patient;
   public isEditing = false;
 
   constructor(private route: ActivatedRoute, private service: PatientsService, private router: Router, private cdr: ChangeDetectorRef) {
@@ -36,6 +37,7 @@ export class PatientDetail {
     //copia del editable
     this.patient$.subscribe(p => {
       this.editablePatient = { ...p };
+      this.editablePatientOriginal = { ...p };
     });
   }
 
@@ -47,6 +49,10 @@ export class PatientDetail {
     if (this.isEditing){
       this.savePatient();
     }
+    this.isEditing = !this.isEditing;
+  }
+  cancelEdit() {
+    this.editablePatient = {...this.editablePatientOriginal};
     this.isEditing = !this.isEditing;
   }
 

@@ -2,7 +2,8 @@
 
     <div id="patient-detail-buttons">
         <button (click)="goHome()"><b>←</b> Tornar</button>
-        <button (click)="toggleEdit()" >{{ isEditing ? "Desar" : "Editar" }}</button>
+        <button (click)="cancelEdit()" style="display: {{ isEditing ? 'flex' : 'none'}};">Cancel·lar canvis</button>
+        <button (click)="toggleEdit()" >{{ isEditing ? "Desar canvis" : "Editar" }}</button>
     </div>
 
     <div id="patient-detail-box">
